@@ -9,6 +9,7 @@ function addJiraComment(jiraKey, comment, username, password) {
         },
         json: {body: comment.replace(/\\n/g, '\n')}
     });
+    console.log(comment + "\n" + "The table has been published to Jira number " + jiraKey);
     return JSON.parse(res.getBody('utf8'));
 }
 
