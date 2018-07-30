@@ -1,6 +1,9 @@
 const request = require('sync-request');
-const PRIVATE_TOKEN = require('./config').PRIVATE_TOKEN;
-const GITLAB_REST_API = require('./config').GITLAB_REST_API;
+const config = require('./config');
+const PRIVATE_TOKEN = config.PRIVATE_TOKEN;
+const GITLAB_REST_API = config.GITLAB_REST_API;
+const axios = require('axios');
+axios.defaults.headers.common['PRIVATE-TOKEN'] = PRIVATE_TOKEN;
 
 function extractProject(projectName, projects) {
     const projectList = projects.filter(u => {
