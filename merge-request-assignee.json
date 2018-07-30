@@ -1,0 +1,8 @@
+{
+  "group": {
+    "assignee": "test.test",
+    "subgroup": {
+      "assignee": "test2.test2"
+    }
+  }
+}
